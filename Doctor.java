@@ -41,24 +41,24 @@ public class Doctor implements Runnable {
     }
 
     public void AssignPatient() {
-        System.out.println("Doctor " + doctorId + " is assigned to" + currentPatient.getPatientName());
+        System.out.println("Doctor " + doctorId + " is assigned to " + currentPatient.getPatientName());
     }
 
     public boolean TryAcquireTreatmentRoom() {
-        System.out.println("Doctor " + doctorId + " is trying to acquire a treatment");
+        System.out.println("Doctor " + doctorId + " is trying to acquire a treatment room");
 
         boolean acquired = treatmentRooms.tryAcquireRoom();
 
         if (acquired) {
             System.out.println("Doctor " + doctorId + " acquired a treatment room");
         } else {
-            System.out.println("Doctor " + doctorId + " could not acquire a treatmen room");
+            System.out.println("Doctor " + doctorId + " could not acquire a treatment room");
         }
         return acquired;
     }
 
     public void BeginTreatment() {
-        System.out.println("Doctor " + doctorId + " begins treating" + currentPatient.getPatientName());
+        System.out.println("Doctor " + doctorId + " begins treating " + currentPatient.getPatientName());
         
     }
 
